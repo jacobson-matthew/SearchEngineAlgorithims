@@ -6,6 +6,8 @@ Implement the simplified Search Engine described in Section 23.6 (Subsection; Se
 
 Can be found @ : https://learn.zybooks.com/zybook/STEVENSCPE600CS600Fall2022/chapter/23/section/6
 
+![Project Instructions](https://raw.github.com/jacobson-matthew/SearchEngineAlgorithims/master/SearchEngine%20instructions.png)
+
 Submit the following four files:
 
 1. A read me file that contains details of your approach to the problem, including description of Algorithms and Data Structure used.
