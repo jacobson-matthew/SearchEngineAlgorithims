@@ -33,7 +33,7 @@ Answer: No. You shall implement what is described in Section 23.6.4. using the a
 
 3. What criteria should I use for ranking?
 
-Answer: I leave that to you to come up with some simple criteria and algorithm to implement ranking, such as the number of times a word has appeared in the document or any other idea you have. But please explain your approach.
+Answer: I leave that to you to come up with some simple criteria and algorithm to implement ranking, such as the **number of times a word has appeared in the document** or any other idea you have. But please explain your approach.
 
 4. Can I provide screenshots of my output?
 
@@ -47,4 +47,4 @@ If you are using java, use jsoup: https://jsoup.org/Links to an external site..
 If you are using Python, use beautiful soup:https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
 6. Can I use any available packages for parsing?
-Answer: Yes
+** I will be using "multi_rake" for keyword parsing**
