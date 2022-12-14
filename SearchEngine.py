@@ -7,4 +7,4 @@
 
 keywords = []
 
-#now convert these
+#now convert these to compressed tries to be searched and indexed

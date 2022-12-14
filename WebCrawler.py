@@ -6,6 +6,8 @@ from bs4 import BeautifulSoup
 # need to be able to make HTTPS requests to parse web page info from links
 # BS4 does not do this natively
 import requests
+# why does multi-rake not work
+
 
 #from Todd @ https://hackersandslackers.com/scraping-urls-with-beautifulsoup/. Websites can have defences
 # to prevent webscraping, a simple way to get around this is to impersonate a browser by crafting our HTTP
