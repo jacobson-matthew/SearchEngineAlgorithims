@@ -6,6 +6,8 @@ Implement the simplified Search Engine described in Section 23.6 (Subsection; Se
 
 Can be found @ : https://learn.zybooks.com/zybook/STEVENSCPE600CS600Fall2022/chapter/23/section/6
 
+![Project Instructions](https://raw.github.com/jacobson-matthew/SearchEngineAlgorithims/master/SearchEngine%20instructions.png)
+
 Submit the following four files:
 
 1. A read me file that contains details of your approach to the problem, including description of Algorithms and Data Structure used.
@@ -31,7 +33,7 @@ Answer: No. You shall implement what is described in Section 23.6.4. using the a
 
 3. What criteria should I use for ranking?
 
-Answer: I leave that to you to come up with some simple criteria and algorithm to implement ranking, such as the number of times a word has appeared in the document or any other idea you have. But please explain your approach.
+Answer: I leave that to you to come up with some simple criteria and algorithm to implement ranking, such as the **number of times a word has appeared in the document** or any other idea you have. But please explain your approach.
 
 4. Can I provide screenshots of my output?
 
@@ -43,5 +45,6 @@ Answer:
 
 If you are using java, use jsoup: https://jsoup.org/Links to an external site..
 If you are using Python, use beautiful soup:https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
 6. Can I use any available packages for parsing?
-Answer: Yes
+** I will be using "multi_rake" for keyword parsing**
