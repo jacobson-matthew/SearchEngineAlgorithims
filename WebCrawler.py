@@ -20,41 +20,32 @@ headers = {
     }
 
 #make soup from given links
-webpages = ["https://www.techrepublic.com/article/top-cybersecurity-threats/",
-            "https://www.washingtonpost.com/politics/2022/11/15/two-enormous-cyberattacks-convince-australia-hack-hackers/",
-            "https://thehill.com/policy/cybersecurity/3737050-mayorkas-ties-with-private-sector-foreign-partners-increasingly-vital-as-cyber-threats-rise/",
-            "https://finance.yahoo.com/news/statement-government-canada-welcomes-auditor-181900119.html",
-            "https://news.usni.org/2022/11/15/gao-report-on-pentagon-cybersecurity-incidents",
-            "https://www.darkreading.com/edge-ask-the-experts/modern-ciso-more-than-a-security-officer",
-            "https://www.darkreading.com/vulnerabilities-threats/how-routine-pen-testing-can-reveal-the-unseen-flaws-in-your-cybersecurity-posture",
-            "https://thehill.com/policy/cybersecurity/3737251-fbi-head-china-has-stolen-more-us-data-than-every-other-nation-combined/",
-            "https://cyware.com/cyber-security-news-articles",
-            "https://www.securityweek.com/zendesk-vulnerability-could-have-given-hackers-access-customer-data"]
-# initalize list to store webpage data to be pre-processed\
+webpages = ['https://www.techrepublic.com/article/top-cybersecurity-threats/',
+            'https://www.washingtonpost.com/politics/2022/11/15/two-enormous-cyberattacks-convince-australia-hack-hackers/',
+            'https://thehill.com/policy/cybersecurity/3737050-mayorkas-ties-with-private-sector-foreign-partners-increasingly-vital-as-cyber-threats-rise/',
+            'https://finance.yahoo.com/news/statement-government-canada-welcomes-auditor-181900119.html',
+             'https://news.usni.org/2022/11/15/gao-report-on-pentagon-cybersecurity-incidents',
+            'https://www.darkreading.com/edge-ask-the-experts/modern-ciso-more-than-a-security-officer',
+            'https://www.darkreading.com/vulnerabilities-threats/how-routine-pen-testing-can-reveal-the-unseen-flaws-in-your-cybersecurity-posture',
+            'https://thehill.com/policy/cybersecurity/3737251-fbi-head-china-has-stolen-more-us-data-than-every-other-nation-combined/',
+            'https://cyware.com/cyber-security-news-articles',
+            'https://www.securityweek.com/zendesk-vulnerability-could-have-given-hackers-access-customer-data']
 
-webpagesHTML = []
 
-#iterate through webpages
+# initalize list to store webpage data to be pre-processed
+textStorage = []
+
 for webpage in webpages:
-    #use the header above to get HTML information
-    HTTPRequest = requests.get(webpage, headers)
-    print(HTTPRequest)
-    #parse http info with the built in bs4 parser
-    content = BeautifulSoup(HTTPRequest, 'html.parser')
-    print(content)
-    #then add to our pagehtml storage list
-    webpagesHTML.append(content.get_text())
+    r = requests.get(webpage)
+    soup = BeautifulSoup(r.text, 'lxml')
+    temp = []
+    for x in soup.find_all('p'):
+        temp.append(x.text)
+    textStorage.append(temp)
 
-
-for x in webpagesHTML:
-    print(x)
-
-
-
-
-
-
-
+for x in textStorage:
+    for y in x:
+        print(y)
 
 
 
