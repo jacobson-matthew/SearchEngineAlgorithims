@@ -3,7 +3,6 @@
 """
 Input: URL's of websites to be parsed
 Output: HTML files that can be paresed by the search engine
-
 """
 #import os
 import os
@@ -28,8 +27,7 @@ headers = {
     }
 
 #make soup from given links
-webpages = ['https://www.techrepublic.com/article/top-cybersecurity-threats/',
-             'https://www.washingtonpost.com/politics/2022/11/15/two-enormous-cyberattacks-convince-australia-hack-hackers/',
+webpages = [ 'https://www.washingtonpost.com/politics/2022/11/15/two-enormous-cyberattacks-convince-australia-hack-hackers/',
              'https://thehill.com/policy/cybersecurity/3737050-mayorkas-ties-with-private-sector-foreign-partners-increasingly-vital-as-cyber-threats-rise/',
             'https://finance.yahoo.com/news/statement-government-canada-welcomes-auditor-181900119.html',
              'https://news.usni.org/2022/11/15/gao-report-on-pentagon-cybersecurity-incidents',
@@ -70,6 +68,7 @@ for webpage in webpages:
         urlCount+=1
         os.chdir(cwd)
     else:
+        #This line parses and washes urls before they are turned into something that the system to use. Html tags and any special characters can cause issues for the python os package operations. 
         fileName = re.sub(r'[^\w]', ' ', str(webTitle[7:webTitle.index('</title>')].replace(" ","_"))) + '.html'
         # print(fileName)
         # #Otherwise, the title gives us a good Name of the webpage indexed but for the sake of simplicity we will narrow it down to the first 4 words. 
@@ -85,20 +84,7 @@ for webpage in webpages:
                 else:
                     file.write(link.get('href'))
             # file.close()
-        #     #f.close is not required using the "with .. as .." structure 
+        #f.close is not required using the "with .. as .." structure 
         #lazy work around for tracking url position
         urlCount+=1
         os.chdir(cwd)
-                       
-            
-            
-            
-        
-
-    
-    
-
-        
-
-
-
