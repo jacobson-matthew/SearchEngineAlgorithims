@@ -75,8 +75,6 @@ class Trie:
 
 A trie is initalized with a empty trie consisting of the root node that contains a None data. Then the two methods, addWord(word): and findWord(word): operations will manipulate and return the information that we request. These work essentially the same by iterating through the tree by accessing subsequent "edges" between nodes that connect each word.
 
-# Algorithims
-
 ## Libraries Used 
 
 Webcrawler.py:
