@@ -1,5 +1,4 @@
 # Matthew Jacobson - Search Engine 
-Search Engine Project for CS600A 
 # High Level Explaination
 For the high level explaination for my code, it has 3 main steps. First, users can use the WebCrawler script to input URL's into the code. The WebCrawler will then get html from the internet and save it to local directory for faster parsing, rather than requesting to the internet each time. My program takes on average 2.8 seconds to run. With web requests the time would be at the mercy of server response times. Second, SearchEngine.py works it's magic. SearchEngine creates 'inverted files' of all the html documents in the IndexedWebsiteStorage Directory. 
 
